@@ -8,15 +8,15 @@ const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
-    database : 'connect'
+    database: 'connect'
 });
 
 pool.getConnection((err, connection) => {
 
-    if(err)
-       console.error("Something went wrong while connecting to the database ..."); 
+    if (err)
+        console.error("Something went wrong while connecting to the database ...");
 
-    if(connection)
+    if (connection)
         connection.release();
     return;
 });
